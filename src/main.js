@@ -1,12 +1,24 @@
-const person = {
+const personA = {
   firstName: '太郎',
-  lastName: '田中',
-  getFullName() {
-    setInterval(function() {
-      console.log(`${this.lastName} ${this.firstName}`)
-    })
-    return `${this.lastName} ${this.firstName}`
-  }
+  lastName: '田中'
 }
 
-console.log(person.getFullName())
+const personB = {
+  firstName: '太郎',
+  lastName: '田中'
+}
+
+const personC = {
+  firssName: '太郎',
+  lastName: '田中'
+}
+
+function getFullName(person) {
+  return `${person.lastName} ${person.firstName}`
+}
+
+console.log(
+  getFullName(personA),
+  getFullName(personB),
+  getFullName(personC),
+)
