@@ -1,19 +1,9 @@
-type SomeOptionalType = {
-  b?: {
-    c?: {
-      d: number
-    }
+const person = {
+  firstName: '太郎',
+  lastName: '田中',
+  getFullName() {
+    return `${this.lastName} ${this.firstName}`
   }
 }
 
-const a: SomeOptionalType = {
-  b: {
-    c: {
-      d: 1234
-    }
-  }
-}
-
-const tmp = a?.['b']?.c?.d ?? 5678
-
-console.log(tmp)
+console.log(person.getFullName())
